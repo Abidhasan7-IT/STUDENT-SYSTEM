@@ -1,0 +1,85 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('../Images/akash1.gif');
+    background-size: cover;
+   
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Setting the height and Width */
+.ab {
+    height: 436px;
+    width: 50%;
+    
+    float: left;
+}
+.bc {
+    height: 436px;
+    width: 50%;
+    float:left;
+    background-image: url('../Images/hero.png');
+}
+.dc {
+    font-size: 50px;
+    padding: 16% 15% 0 16%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pc {
+    font-size:24px;
+    padding: 16%;
+    color:orangered;
+    font-family:'Agency FB';
+}
+
+#tb1 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #tb1 td, #tb1 th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #tb1 tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #tb1 tr:hover {
+        background-color: #ddd;
+    }
+
+    #tb1 th
+    {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+
+ #thead{
+     text-align:center;
+ }

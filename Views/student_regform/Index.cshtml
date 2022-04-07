@@ -1,0 +1,101 @@
+﻿@model IEnumerable<StudentManagementSystem.student_regform>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .myactionlink {
+        color: red;
+    }
+</style>
+<h2>Student List</h2>
+<hr />
+
+<p>
+    @Html.ActionLink("Register New", "Create") |
+    
+
+    @if (User.Identity.IsAuthenticated)
+    {
+   <span> @Html.ActionLink("Click here to Logout", "logout", "Account", null, new { id = "OT", style = "color: Red" })</span>
+
+}
+else
+{
+    <h2> @Html.ActionLink("Login", "login", "Account")</h2>
+}
+    </p>
+
+
+
+    <div>
+        @if (User.Identity.IsAuthenticated)
+        {
+
+            <p class="pstyle"> Dear <b>@User.Identity.Name</b>, you are the admin of this Pannel.</p>
+            @*<h4> @Html.ActionLink("Click here to Logout", "logout", "Account")</h4>*@
+
+        }
+        else
+        {
+            <h2> @Html.ActionLink("Login", "login", "Account")</h2>
+        }
+    </div>
+
+
+
+
+
+    <table id="tb1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>Operation</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.ActionLink("Update", "Edit", new { id = item.nid }) |
+                    @Html.ActionLink("View", "Details", new { id = item.nid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.nid })
+                </td>
+            </tr>
+        }
+
+    </table>

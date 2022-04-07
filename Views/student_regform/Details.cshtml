@@ -1,0 +1,50 @@
+﻿@model StudentManagementSystem.student_regform
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br /><br />
+
+<div>
+    <table id="tb1">
+        <tr>
+            <th colspan="2"> Student Details</th>
+        </tr>
+        <tr>
+            <td> @Html.DisplayNameFor(model => model.Id)</td>
+            <td> @Html.DisplayFor(model => model.Id)</td>
+        </tr>
+
+        <tr>
+            <td> @Html.DisplayNameFor(model => model.Name)</td>
+            <td> @Html.DisplayFor(model => model.Name)</td>
+        </tr>
+
+        <tr>
+            <td> @Html.DisplayNameFor(model => model.Email)</td>
+            <td> @Html.DisplayFor(model => model.Email)</td>
+        </tr>
+
+        <tr>
+            <td> @Html.DisplayNameFor(model => model.Phone)</td>
+            <td> @Html.DisplayFor(model => model.Phone)</td>
+        </tr>
+
+        <tr>
+            <td> @Html.DisplayNameFor(model => model.Department)</td>
+            <td> @Html.DisplayFor(model => model.Department)</td>
+        </tr>
+
+        <tr>
+            <td> @Html.DisplayNameFor(model => model.Address)</td>
+            <td> @Html.DisplayFor(model => model.Address)</td>
+        </tr>
+
+    </table>
+</div>
+<br /><br />
+<p>
+    @Html.ActionLink("Update", "Edit", new { id = Model.nid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

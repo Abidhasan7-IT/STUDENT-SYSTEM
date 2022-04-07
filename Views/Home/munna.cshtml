@@ -1,0 +1,20 @@
+﻿@{ 
+    ViewBag.Title = "THis is View Bag";
+}
+
+@{ 
+    ViewData["new"] = "This View Data";
+}
+
+@{ 
+    int a = 10;
+    int b = 10;
+    int z = a + b;
+}
+
+<h3>The Summation of @a and @b  is: @z</h3>
+
+
+<h2>@ViewBag.Title</h2>
+<h2>@ViewData["new"]</h2>
+
